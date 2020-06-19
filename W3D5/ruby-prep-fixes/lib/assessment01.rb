@@ -33,8 +33,19 @@ end
 # is 1!, the 3rd factorial is 2!, etc.
 
 def factorials_rec(num)
-  
+  return [1] if num == 1
+  memo = factorials_rec(num - 1)
+  memo << (num - 1) * memo[-1]
 end
+
+# def factorial(n)
+#   return 1 if n == 1
+#   (n - 1) * factorial(n-1)
+# end
+# p factorial(1) # => 1
+# p factorial(2) # => 1
+# p factorial(3) # => 2
+# p factorial(6) # => 120
 
 class Array
   # Write an `Array#dups` method that will return a hash containing the indices 
