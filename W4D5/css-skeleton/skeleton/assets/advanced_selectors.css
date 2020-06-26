@@ -1,4 +1,16 @@
 /* Introduction to Cascading Style Sheets */
+input {
+  outline: none;
+  cursor: pointer;
+}
+select, option {
+  outline: none;
+  cursor: pointer;
+}
+
+#reviews :input {
+  background-color: gold;
+}
 
 body {
   /* If the user cannot load the Arial font, the sans-serif font is used */
