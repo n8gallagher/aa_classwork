@@ -1,0 +1,20 @@
+div, p, li, ul, ol, body, header, footer, 
+select, option, h2, figure, figcaption, img,
+section, aside, nav, script, meta, title, link, html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: inherit;
+    line-height: 1.5;
+    font-family: "comic-sans", cursive;
+    font-weight: italic;
+}
+
+li, ul, ol {
+    
+}
+
+img {
+    width: inherit;
+
+}
