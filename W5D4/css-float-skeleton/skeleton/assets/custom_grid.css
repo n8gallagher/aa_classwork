@@ -1,0 +1,15 @@
+/* PUT FLUID GRID CODE HERE */
+header ul li{float: left;
+    margin-right: 10px;
+}
+
+ header ul{float: right;
+}
+
+.cf:after{content: ''
+    clear: both;
+    display: block;
+}
+
+.col{float: left;
+padding: 10px }
