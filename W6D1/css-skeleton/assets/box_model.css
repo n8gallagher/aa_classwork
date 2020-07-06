@@ -6,12 +6,50 @@ body {
   background-color: #FEFFF1;
 }
 
+nav li {
+  display: inline-block
+}
+
+nav li a {
+  padding: 20px;
+}
+
+nav {
+  display: inline-block;
+}
+
+body {
+  width: 900px;
+  margin: 0 auto;
+}
+
+section {
+  width: 700px;
+}
+
+aside {
+  width: 180px;
+  float: left;
+}
+
+section {
+  float: left;
+}
+
 h1 {
   font-size: 38px;
 }
 
 h2 {
   font-size: 32px;
+}
+
+aside ul li {
+  margin: 15px;
+}
+
+ol li {
+  margin: 15px;
 }
 
 /* This selector selects ALL anchor tag children of ALL list elements that
@@ -43,12 +81,25 @@ ol {
   font-weight: bold;
 }
 
+input {
+  display: inline-block;
+}
+
+select {
+  margin: 15px;
+  width: 130px;
+}
+
 input[type="radio"] {
     -webkit-appearance: none;
     width: 27px;
     height: 27px;
     background-image: url(../assets/stars.png);
     vertical-align: bottom;
+}
+
+input[type="text"] {
+  width: 100px;
 }
 
 input[type="radio"]:checked {
