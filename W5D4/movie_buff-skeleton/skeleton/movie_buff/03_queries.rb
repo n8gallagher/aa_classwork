@@ -12,10 +12,11 @@ end
 def golden_age
   # Find the decade with the highest average movie score.
   Movie
-  .select('(yr / 10) * 10 as decade')
+  .select('AVG(score), (yr / 10) * 10 as decade')
   .group('decade')
   .order('AVG(score) DESC')
-  .limit(1)
+  .first
+  .decade
   
   #select floor(year(`year`) / 10) * 10 as decade
 end
@@ -25,15 +26,15 @@ def costars(name)
   # appeared with.
   # Hint: use a subquery
   
-  Movie
-    .select(:name)
-    .joins(:actors)
-    .where(:id) IN (
+  # Movie
+  #   .select(:name)
+  #   .joins(:actors)
+  #   .where(:id) IN (
   
-  Movie
-    .select(:id)
-    .joins(:actors)
-    .where(actors: {name: name }))
+  # Movie
+  #   .select(:id)
+  #   .joins(:actors)
+  #   .where(actors: {name: name }))
 
 end
 
