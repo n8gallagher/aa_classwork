@@ -1,0 +1,32 @@
+<h1>NEW CAT FORM VIEW</h1>
+
+
+<form action="<%= cats_url %>" method="POST">
+    <label for="name">name: </label>
+    <input type="text" id="name" name="cat[name]" value="<%= @cat.name %>">
+
+    <label for="color">Select Color: </label>
+    <select id="color" name="cat[color]" value="<%= @cat.color %>">
+
+        <option value="" disabled>--Select A Color--</option>
+        <option value="Rainbow">Rainbow</option>
+        <option value="Black">Black</option>
+        <option value="White">White</option>
+        <option value="Orange">Orange</option>
+    </select>
+
+    <label for="birth_date">birth_date: </label>
+    <input type="text" id="birth_date" name="cat[birth_date]" value="<%= @cat.birth_date %>">
+
+    <label for="sex">M</label>
+    <input type="radio" id="sex" name="cat[sex]" value="M">
+    <label for="sex">F</label>
+    <input type="radio" id="sex" name="cat[sex]" value="F">
+    <%# need to restrict user from selecting two genders%>
+    <br>
+
+    <label for="description">description: </label>
+    <input type="text" id="description" name="cat[description]" value="<%= @cat.description %>">
+    <input type="submit" value="Create Cat">
+</form>
+
