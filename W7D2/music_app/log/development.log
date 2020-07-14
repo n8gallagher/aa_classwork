@@ -1,0 +1,483 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:4
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20200714191206)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "password_digest" varchar NOT NULL, "session_token" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200714191206_create_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20200714191206_create_users.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  ↳ db/migrate/20200714191206_create_users.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200714191206"]]
+  ↳ bin/rails:4
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-14 19:14:09.232072"], ["updated_at", "2020-07-14 19:14:09.232072"]]
+  ↳ bin/rails:4
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nateg/.rbenv/versions/2.5.1/bin/annotate:23
+Started GET "/" for ::1 at 2020-07-14 14:20:57 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nateg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nateg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nateg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb (7.5ms)
+Completed 200 OK in 32ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 14:21:07 -0700
+
+ActionController::RoutingError - undefined method `logout!' for ApplicationController:Class:
+
+Started POST "/__better_errors/4d1e8914a514029c/variables" for ::1 at 2020-07-14 14:21:07 -0700
+Started GET "/users" for ::1 at 2020-07-14 14:21:31 -0700
+
+ActionController::RoutingError - undefined method `logout!' for ApplicationController:Class:
+
+Started POST "/__better_errors/5949eb97d2ce6c45/variables" for ::1 at 2020-07-14 14:21:31 -0700
+Started GET "/users/new" for ::1 at 2020-07-14 14:22:58 -0700
+
+ActionController::RoutingError - undefined method `logout!' for ApplicationController:Class:
+
+Started POST "/__better_errors/44b719ba0872d83d/variables" for ::1 at 2020-07-14 14:22:58 -0700
+Started POST "/__better_errors/44b719ba0872d83d/eval" for ::1 at 2020-07-14 14:23:28 -0700
+Started GET "/" for ::1 at 2020-07-14 14:23:35 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/nateg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/nateg/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2020-07-14 14:23:40 -0700
+
+ActionController::RoutingError - undefined method `logout!' for ApplicationController:Class:
+
+Started POST "/__better_errors/bf4abdd182284a31/variables" for ::1 at 2020-07-14 14:23:40 -0700
+Started GET "/users/new" for ::1 at 2020-07-14 14:24:38 -0700
+
+ActionController::RoutingError - undefined local variable or method `require_logged_in' for ApplicationController:Class
+Did you mean?  require_or_load:
+
+Started POST "/__better_errors/e8a0476dd5d4e1d3/variables" for ::1 at 2020-07-14 14:24:39 -0700
+Started GET "/users/new" for ::1 at 2020-07-14 14:25:10 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1014ms (Views: 1013.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-07-14 14:25:29 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/83af6a4173f1e3cf/variables" for ::1 at 2020-07-14 14:25:30 -0700
+Started POST "/users" for ::1 at 2020-07-14 14:26:48 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/cd6a66b182c8b95c/variables" for ::1 at 2020-07-14 14:26:48 -0700
+Started POST "/users" for ::1 at 2020-07-14 14:27:32 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/6ecaf7b5f11514f5/variables" for ::1 at 2020-07-14 14:27:32 -0700
+Started POST "/users" for ::1 at 2020-07-14 14:27:51 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/551f0f57afc054b4/variables" for ::1 at 2020-07-14 14:27:52 -0700
+Started POST "/users" for ::1 at 2020-07-14 14:29:26 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/8d7dc00193005568/variables" for ::1 at 2020-07-14 14:29:26 -0700
+Started POST "/users" for ::1 at 2020-07-14 14:30:09 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/f847a83f708c9e74/variables" for ::1 at 2020-07-14 14:30:10 -0700
+Started POST "/users" for ::1 at 2020-07-14 14:30:29 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/beda5dabd1c976bc/variables" for ::1 at 2020-07-14 14:30:29 -0700
+Started POST "/users" for ::1 at 2020-07-14 14:32:04 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/cf57ae85c3533894/variables" for ::1 at 2020-07-14 14:32:04 -0700
+Started POST "/users" for ::1 at 2020-07-14 14:34:04 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/fed8ff0efc741fba/variables" for ::1 at 2020-07-14 14:34:04 -0700
+Started GET "/session/new" for ::1 at 2020-07-14 14:36:16 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-07-14 14:36:27 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"zBo31wD6xv/qZZMhdwG4PjheNXbTHf6m8JpqgI203jXHveMWQ91s/I6krCY4w/7PHOPKD2oTONgBOLYtM7AgiA==", "user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for ::1 at 2020-07-14 14:39:41 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-07-14 14:39:53 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"NmnFE4o8KZJFUcWf72aCHB/soXoImD3Ccvmpfv4MOkY9zhHSyRuDkSGQ+pigpMTtO1FeA7GW+7yDW3XTQAjE+w==", "user"=>{"email"=>"fake@blog.net", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "fake@blog.net"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Create (5.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "fake@blog.net"], ["password_digest", "$2a$12$S9zijpV3GgcuH1l1jvlMcuhm4yGbG7pzEJr1raa6U8q6ql.FKfGUS"], ["session_token", "WR4uUVjJGdJljUOFCbODng"], ["created_at", "2020-07-14 21:39:53.448451"], ["updated_at", "2020-07-14 21:39:53.448451"]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "fake@blog.net"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["session_token", "bt1AovD1wmODQR_hzLG0cg"], ["updated_at", "2020-07-14 21:39:53.464625"], ["id", 1]]
+  ↳ app/models/user.rb:42
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:42
+Completed 500 Internal Server Error in 301ms (ActiveRecord: 18.6ms)
+
+
+
+NoMethodError - undefined method `to' for #<UsersController:0x00007fc82d83d950>
+Did you mean?  t:
+  app/controllers/users_controller.rb:10:in `create'
+
+Started POST "/__better_errors/095159d73ce804b6/variables" for ::1 at 2020-07-14 14:39:53 -0700
+Started POST "/users" for ::1 at 2020-07-14 14:40:14 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"NmnFE4o8KZJFUcWf72aCHB/soXoImD3Ccvmpfv4MOkY9zhHSyRuDkSGQ+pigpMTtO1FeA7GW+7yDW3XTQAjE+w==", "user"=>{"email"=>"fake@blog.net", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "fake@blog.net"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 270ms (Views: 16.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 14:45:57 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 14:52:09 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 14:52:57 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 14:53:31 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 14:56:14 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.2ms)
+
+
+
+ActionView::Template::Error - undefined local variable or method `new_users_url' for #<#<Class:0x00007fc83c9bafa8>:0x00007fc82d331330>
+Did you mean?  new_user_url:
+  app/views/layouts/application.html.erb:22:in `view template'
+  app/controllers/users_controller.rb:18:in `index'
+
+Started POST "/__better_errors/1909bad680f9e50e/variables" for ::1 at 2020-07-14 14:56:15 -0700
+Started GET "/users" for ::1 at 2020-07-14 14:56:37 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/session/new" for ::1 at 2020-07-14 14:56:47 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2020-07-14 14:56:57 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ph9v1kt8T9x4nc4ud7SKzztw14MegKPIdj3vQoctDU+tuLsXCFvl3xxc8Sk4dsw+H80o+qeOZbaHnzPvOSnz8g==", "user"=>{"email"=>"fake@blog.net", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/session" for ::1 at 2020-07-14 14:57:38 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"MUuXS44g9r5uUBqXSwdZ53wZeG8WHyviVILNqRyr9FI67EOKzQdcvQqRJZAExR8WWKSHFq8R7ZylIBEEoq8K7w==", "user"=>{"email"=>"fake@blog.net", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for ::1 at 2020-07-14 14:57:44 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 14:57:51 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2020-07-14 14:58:44 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-07-14 14:58:55 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"ZJ4j383ENHbVBjyaNndPyculCDOwFf92LpACyx/Yv1pvOfcejuOedbHHA515tQk47xj3SgkbOQjfMt5modxB5w==", "user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nate@thegreat.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Create (5.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "nate@thegreat.com"], ["password_digest", "$2a$12$dU320G3GQ4KT1k2VZVBpveYY1B9y28NPjF8JFruZE/XvF1sgKruTe"], ["session_token", "G4VCCj1-YnEHQlmI5O25WQ"], ["created_at", "2020-07-14 21:58:56.024675"], ["updated_at", "2020-07-14 21:58:56.024675"]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:42
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "nate@thegreat.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:42
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["session_token", "wq_yyQPhJ9ovl6kYjmlZLA"], ["updated_at", "2020-07-14 21:58:56.043051"], ["id", 2]]
+  ↳ app/models/user.rb:42
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:42
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 235ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/users/2" for ::1 at 2020-07-14 14:58:56 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/mnt/b/aa_classwork/W7D2/music_app/app/views"
+:
+  app/controllers/users_controller.rb:22:in `show'
+
+Started POST "/__better_errors/f022ac28686ad956/variables" for ::1 at 2020-07-14 14:58:56 -0700
+Started POST "/users" for ::1 at 2020-07-14 14:59:57 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"ZJ4j383ENHbVBjyaNndPyculCDOwFf92LpACyx/Yv1pvOfcejuOedbHHA515tQk47xj3SgkbOQjfMt5modxB5w==", "user"=>{"email"=>"nate@thegreat.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nate@thegreat.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 231ms (Views: 18.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 15:00:02 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 15:03:15 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 15:05:30 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT ?[0m  [["session_token", "wq_yyQPhJ9ovl6kYjmlZLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 15:06:19 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2020-07-14 15:09:05 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = ? LIMIT ?[0m  [["session_token", "wq_yyQPhJ9ovl6kYjmlZLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/session" for ::1 at 2020-07-14 15:09:15 -0700
+
+AbstractController::ActionNotFound - The action 'destroy' could not be found for SessionsController:
+
+Started POST "/__better_errors/f053dfe3b5843d4c/variables" for ::1 at 2020-07-14 15:09:15 -0700
+Started DELETE "/session" for ::1 at 2020-07-14 15:12:17 -0700
+Processing by SessionsController#destroy as HTML
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/1a8057ce24d4653f/variables" for ::1 at 2020-07-14 15:12:17 -0700
+Started DELETE "/session" for ::1 at 2020-07-14 15:13:01 -0700
+Processing by SessionsController#destroy as HTML
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/__better_errors/164cdc05129fd17d/variables" for ::1 at 2020-07-14 15:13:01 -0700
