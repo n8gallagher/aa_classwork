@@ -1,0 +1,40 @@
+// Use the gear_dropdown.png screenshot as a style guide
+// .dropdown-subtitle {
+//     position: absolute;
+//     display: none; 
+//     background-color: white; 
+//     box-shadow: 2px 2px;
+// }
+
+.gear-dropdown hidden {
+    display: none;
+}
+
+#gear-dropdown {
+    display: block;
+    position: absolute;
+    background-color: white; 
+    box-shadow: 2px 2px 2px 2px $dark-gray;
+    width: 300px; 
+    text-align: left;
+    left: -280px;
+    z-index: 1;
+
+}
+
+.dropdown-subtitle{
+    font-size: 12px; 
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $gray;
+}
+
+.editions li {
+    color: $gray; 
+    text-transform: uppercase; 
+    font-size: ;
+}
+// .gear-dropdown hidden li :hover .dropdown-subtitle {
+//     display: none;
+// }
+

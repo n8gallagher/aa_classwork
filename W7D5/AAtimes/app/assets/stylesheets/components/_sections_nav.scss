@@ -1,0 +1,23 @@
+.section {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    border-bottom:  1px solid $light-gray;
+    align-items: center;
+
+}
+
+.section li {
+    padding: 10px;
+    font-family: $sans-serif;
+}
+
+.section li :hover {
+    background-color: $lightest-gray;
+}
+
+.section li:last-child {
+    text-decoration: underline;
+    font-size: 9px; 
+    text-transform: uppercase;
+}

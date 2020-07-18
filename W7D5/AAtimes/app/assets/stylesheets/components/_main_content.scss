@@ -1,0 +1,67 @@
+.col-left li{
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.col-left{
+    float: left;
+    width: 20%;
+}
+
+.col-main {
+    width: 50%;
+    float: left;
+
+}
+
+.col-right {
+    // display: flex;
+    // flex-direction: column;
+    float: left;
+    width: 30%;
+    text-align: center;
+
+} 
+.sign-up {
+    display: inline-block;
+    padding-top: 5px;
+    position: relative;
+}
+.sign-up button {
+    width: 80px;
+    float:right;
+    text-align: center;
+    //position: absolute;
+}
+// .col-right h3 {
+//     align-self: center;
+// }
+
+.contrib {
+    float: left;
+     width: 50%;
+}
+
+.operations {
+    float: left;
+    width: 50%;
+
+}
+.col-left h2, .col-main h3, .contrib h4 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.col-left a {
+    color: $blue;
+    text-decoration: underline;
+}
+
+.contrib-list li{
+    font-weight: bold;
+}
+
+.contrib-list {
+    list-style-type: disc;
+    list-style-position: inside;
+}
