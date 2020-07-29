@@ -1,0 +1,26 @@
+/* PHASE 7: Online */
+.online {
+    background-color: limegreen;
+    border: 1px solid black;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+    transform: rotate(-45deg);
+    position: absolute;
+    box-shadow: 3px 6px darkgray;
+    width: 100px;
+    left: -10px;
+    top: 15px;
+    z-index: 0;
+}
+
+.online-box {
+    position: relative;
+}
+
+.online-box > a {
+    z-index: 1;
+    overflow: hidden;
+}
