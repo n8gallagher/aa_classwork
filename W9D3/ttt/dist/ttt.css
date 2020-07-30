@@ -1,0 +1,47 @@
+html {
+    display: flex;
+    /* position: relative; */
+    justify-content: center;
+}
+h1 {
+    
+}
+
+p {
+    position: absolute;
+    font-size: 150px;
+    top: -55px;
+    left: 10px;
+    margin: 0;
+}
+.ttt {
+    display: block;
+    width: 350px;
+    height: 333.33px;
+}
+#board {
+    list-style-type: none;
+    display: flex;
+    padding: 0px;
+    margin: 0;
+    background-color: lightgrey;
+   
+    
+}
+
+li {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    outline: 10px solid black;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    background: grey;
+}
+
+li:hover {
+    background-color: yellow;
+}
