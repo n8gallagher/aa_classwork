@@ -1,0 +1,36 @@
+/* PHASE 12: Modal */
+
+body > .modal {
+    
+}
+
+.modal-screen {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-form{
+    position: absolute;
+    margin: 0 0 20px 0;
+    padding: 0 0 3px 0;
+    /* margin: 20px 0 0 0; */
+
+}
+
+.is-open {
+    display: block;
+
+}
+
+.js-modal-open {
+
+}
+
+.js-modal-close {
+
+}

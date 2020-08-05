@@ -1,0 +1,28 @@
+.tile {
+    height: 40px;
+    width: 40px;
+    background: gray;
+    border-style: outset;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 295px;
+    min-height: 50px;
+    justify-content: space-evenly;
+    border: 5px solid black;
+    border-style: outset;
+}
+
+.bombed {
+    background: orange;
+}
+
+.explored {
+    background: green;
+}
+
+.flagged {
+    background: purple;
+}
